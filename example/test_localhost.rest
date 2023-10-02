@@ -1,0 +1,71 @@
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username": "emma",
+    "password": "emma"
+}
+> {% client.global.set("auth_token", response.body.access); %}
+
+
+###
+POST http://127.0.0.1:8000/v1/entities
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+
+{
+  "name": "test_entity_11",
+  "fields": [
+    {
+      "name": "entity_id",
+      "type": "int",
+      "config": {
+      },
+      "nullable": false,
+      "default": 0
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "config": {
+        "length": 10
+      },
+      "nullable": false,
+      "default": "test"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "config": {
+      },
+      "nullable": false,
+      "default": 0
+    },
+    {
+      "name": "money",
+      "type": "money",
+      "config": {},
+      "nullable": true
+    }
+  ],
+  "identity": [
+    "entity_id"
+  ],
+  "primary_keys": [
+    "entity_id"
+  ],
+  "type": "Update"
+}
+
+###
+POST http://127.0.0.1:7990/v1/entities/test_entity_10/records
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "entity_id": 1,
+  "name": "test",
+  "age": 10,
+  "money": "100.5"
+}
