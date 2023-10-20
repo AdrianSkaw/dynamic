@@ -1,6 +1,6 @@
-Dexter
+Hive
 =============
-Service for laboratory (ex. compare image, find attributes ...)
+Service for creating dynamic tables
 
 Require
 ----------
