@@ -1,4 +1,4 @@
-POST http://127.0.0.1:8000/api/token/
+POST http://127.0.0.1:7990/api/token/
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 
 ###
-POST http://127.0.0.1:8000/v1/entities
+POST http://127.0.0.1:7990/v1/entities
 Content-Type: application/json
 Authorization: Bearer {{auth_token}}
 

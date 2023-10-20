@@ -42,9 +42,3 @@ The keys are generated using the following command:
     or
     docker-compose run hive
 
-Authors and contributors
----------
-
-* Adrian Skawinski <adrian.skawinski@brandly360.net>
-* Michal Tomczak <michal.tomczak@brandly360.net>
-* Slawomir Nowak <slawomir.nowak@brandly360.net>

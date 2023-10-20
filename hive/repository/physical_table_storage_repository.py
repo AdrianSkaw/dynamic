@@ -1,5 +1,5 @@
 from django.db import connection
-from psycopg2 import sql
+from psycopg import sql
 
 from hive.repository.physical_table_storage_repository_interface import PhysicalTableStorageRepositoryInterface
 

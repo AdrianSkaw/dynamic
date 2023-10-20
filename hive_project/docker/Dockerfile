@@ -2,6 +2,7 @@
 
 FROM python:3.10
 EXPOSE 8000
+EXPOSE 7790
 WORKDIR /app
 COPY requirements.txt /app
 COPY run.sh /run.sh

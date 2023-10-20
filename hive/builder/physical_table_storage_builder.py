@@ -1,4 +1,4 @@
-from psycopg2 import sql
+from psycopg import sql
 from rest_framework import serializers
 
 from hive.builder.dto.field import Field

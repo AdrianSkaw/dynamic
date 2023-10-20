@@ -6,7 +6,7 @@ from django.db import connection
 from django.test import TestCase
 from django.urls import reverse
 from dotenv import load_dotenv
-from psycopg2 import sql
+from psycopg import sql
 from rest_framework import status
 from rest_framework.test import APIClient
 
